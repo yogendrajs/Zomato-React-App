@@ -40,13 +40,13 @@ export default function Default(props) {
 				<Grid
 					key={index}
 					container
-					// spacing={0}
+					spacing={0}
 					direction="row"
 					alignItems="center"
 					justify="center"
 					style={{ minHeight: "10vh", marginBottom: "30px" }}
 				>
-					<Grid item xs={10} md={6}>
+					<Grid >
 
 						<Card className={classes.card} raised>
 							<CardActionArea href={each.restaurant.url} style={{ display: 'flex' }} target="_blank">

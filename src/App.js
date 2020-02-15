@@ -37,7 +37,7 @@ function App() {
 				`https://developers.zomato.com/api/v2.1/locations?query=${state.location}`,
 				{
 					headers: {
-						"user-key": "422d955f5b5376b0296ac4964caa4599",
+						"user-key": "<your-zomato-api-key>",
 						"content-type": "application/json"
 					}
 				}
@@ -49,7 +49,7 @@ function App() {
 					`https://developers.zomato.com/api/v2.1/geocode?lat=${latitude}&lon=${longitude}`,
 					{
 						headers: {
-							"user-key": "422d955f5b5376b0296ac4964caa4599",
+							"user-key": "<your-zomato-api-key>",
 							"content-type": "application/json"
 						}
 					}

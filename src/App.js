@@ -37,7 +37,7 @@ function App() {
 				`https://developers.zomato.com/api/v2.1/locations?query=${state.location}`,
 				{
 					headers: {
-						"user-key": "<Your_Zomato_User_Key>",
+						"user-key": "422d955f5b5376b0296ac4964caa4599",
 						"content-type": "application/json"
 					}
 				}
@@ -49,7 +49,7 @@ function App() {
 					`https://developers.zomato.com/api/v2.1/geocode?lat=${latitude}&lon=${longitude}`,
 					{
 						headers: {
-							"user-key": "<Your_Zomato_User_Key>",
+							"user-key": "422d955f5b5376b0296ac4964caa4599",
 							"content-type": "application/json"
 						}
 					}
@@ -66,9 +66,20 @@ function App() {
 
 	return (
 		<React.Fragment>
-			<Typography style={{ textAlign: "center" }} variant="h3">
-				Zomato Restaurants
+			<div style={{ background: 'rgb(165, 237, 240)', paddingBottom: '30px', border: 'solid skyblue' }}>
+				<Typography style={
+					{
+						textAlign: "center",
+						paddingTop: '20px',
+						margin: '0 10px',
+						fontFamily: '"Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif'
+					}}
+					variant="h3"
+				>
+					Zomato Restaurants
 			</Typography>
+			</div>
+
 			<br></br>
 			<form
 				// style={{ display: "flex", justifyContent: "center" }}

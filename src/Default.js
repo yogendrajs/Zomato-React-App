@@ -11,17 +11,22 @@ import "semantic-ui-css/semantic.min.css";
 
 const useStyles = makeStyles(theme => ({
 	card: {
-		height: "200px",
-		display: "flex"
+		width: '700px',
+		display: "flex",
+		alignItems: 'center'
 	},
 	media: {
-		width: "250px"
+		width: "300px",
+		borderRadius: '20px',
+		height: '200px',
+		marginLeft: '20px'
 	},
 	content: {
-		width: "auto"
+		width: "500px"
 	},
 	eachContent: {
-		paddingBottom: "5px"
+		paddingBottom: "5px",
+		fontSize: '15px'
 	}
 }));
 
@@ -42,21 +47,20 @@ export default function Default(props) {
 					style={{ minHeight: "10vh", marginBottom: "30px" }}
 				>
 					<Grid item xs={10} md={6}>
-						<CardActionArea href={each.restaurant.url} target="_blank">
-							<Card className={classes.card} raised>
+
+						<Card className={classes.card} raised>
+							<CardActionArea href={each.restaurant.url} style={{ display: 'flex' }} target="_blank">
 								<Image
 									src={each.restaurant.featured_image || restaurantImg}
 									className={classes.media}
-									size="small"
+								// size="small"
 								/>
 								<CardContent className={classes.content}>
 									<Typography color="primary" variant="h5">
 										{each.restaurant.name}
 									</Typography>
 									<Typography color="secondary" variant="subtitle1">
-										{each.restaurant.location.address.length > 74
-											? each.restaurant.location.address.slice(0, 73) + "..."
-											: each.restaurant.location.address}
+										{each.restaurant.location.address}
 									</Typography>
 									<hr></hr>
 									<Typography
@@ -103,11 +107,12 @@ export default function Default(props) {
 										{each.restaurant.user_rating.aggregate_rating}
 									</Typography>
 								</CardContent>
-							</Card>
-						</CardActionArea>
+							</CardActionArea>
+						</Card>
+
 					</Grid>
 				</Grid>
 			);
 		})
-	) 
+	)
 }

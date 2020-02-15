@@ -16,7 +16,13 @@ const useStyles = makeStyles(theme => ({
 		width: "auto"
 	},
 	eachContent: {
-		paddingBottom: "5px"
+		paddingBottom: "5px",
+		fontSize: '13.5px'
+	},
+	card: {
+		'@media (min-width: 475px) and (max-width: 767px)' : {
+			margin: '0  50px'
+		  }
 	}
 }));
 
